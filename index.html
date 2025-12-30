@@ -1,15 +1,214 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Examples of the link element</title>
-    <link rel="stylesheet" href="./styles.css" />
+  <meta charset="utf-8" />
+  <title><!-- insert text here: page title --></title>
+  <meta name="description" content="<!-- insert text here: meta description -->" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Keep original font imports here -->
+  <!-- Example (keep whatever is in your original file) -->
+  <!--
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=YourFont:wght@400;600&display=swap" rel="stylesheet">
+  -->
+
+  <style>
+    :root {
+      /* New palette */
+      --primary: #6B9080;
+      --secondary: #A4C3B2;
+      --accent: #CCE3DE;
+      --background: #F6FFF8;
+      --background-alt: #EAF4F4;
+      --text-main: #1b2520;
+      --text-muted: #4f6458;
+      --border-subtle: #CCE3DE;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--background);
+      color: var(--text-main);
+      /* keep original font-family and base font-size */
+      font-family: /* original font-family here */ sans-serif;
+      font-size: 16px; /* keep original if different */
+    }
+
+    /* Example general styles – keep sizes, only update colors */
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--secondary);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #ffffff;
+    }
+
+    header .nav-link {
+      color: #F6FFF8;
+    }
+
+    header .nav-link:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      background: radial-gradient(circle at top left, var(--background-alt), var(--background));
+      color: var(--text-main);
+    }
+
+    .hero-cta {
+      background-color: var(--primary);
+      color: #F6FFF8;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .hero-cta:hover {
+      background-color: var(--secondary);
+    }
+
+    section {
+      background-color: var(--background);
+    }
+
+    .section-alt {
+      background-color: var(--background-alt);
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .card-title {
+      color: var(--primary);
+    }
+
+    .card-text {
+      color: var(--text-muted);
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: #F6FFF8;
+    }
+
+    footer a {
+      color: #F6FFF8;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+
+    /* Any SVG or icon fills using old colors should be updated to the new palette */
+
+    .pill {
+      background-color: var(--accent);
+      color: var(--text-main);
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Preserve original spacing, sizes, layout-related properties from the template */
+  </style>
 </head>
+<body>
+  <header>
+    <nav>
+      <a href="#home" class="nav-link"><!-- insert text here: nav item --></a>
+      <a href="#about" class="nav-link"><!-- insert text here: nav item --></a>
+      <a href="#projects" class="nav-link"><!-- insert text here: nav item --></a>
+      <a href="#contact" class="nav-link"><!-- insert text here: nav item --></a>
+    </nav>
+    <div class="hero" id="home">
+      <h1><!-- insert text here: main hero title --></h1>
+      <h2><!-- insert text here: subtitle or tagline --></h2>
+      <p><!-- insert text here: short description / elevator pitch --></p>
+      <button class="hero-cta"><!-- insert text here: call-to-action button --></button>
+    </div>
+  </header>
 
-<main>
-<h1>Emma Sara Castelli</h1> <!--This should be like the freitag striscione che si muove -->
- <p>
-    <t>     'Welocme, fancy seeing you here!'   </t>
- </p>         
-</main>
+  <main>
+    <section id="about" class="section-alt">
+      <h2><!-- insert text here: About section title --></h2>
+      <p><!-- insert text here: short bio line 1 --></p>
+      <p><!-- insert text here: short bio line 2 --></p>
+      <p><!-- insert text here: short bio line 3 --></p>
+    </section>
 
+    <section id="projects">
+      <h2><!-- insert text here: Projects section title --></h2>
+
+      <article class="card">
+        <h3 class="card-title"><!-- insert text here: project 1 title --></h3>
+        <p class="card-text"><!-- insert text here: project 1 description --></p>
+        <a href="<!-- insert link here -->"><!-- insert text here: project 1 link label --></a>
+      </article>
+
+      <article class="card">
+        <h3 class="card-title"><!-- insert text here: project 2 title --></h3>
+        <p class="card-text"><!-- insert text here: project 2 description --></p>
+        <a href="<!-- insert link here -->"><!-- insert text here: project 2 link label --></a>
+      </article>
+
+      <article class="card">
+        <h3 class="card-title"><!-- insert text here: project 3 title --></h3>
+        <p class="card-text"><!-- insert text here: project 3 description --></p>
+        <a href="<!-- insert link here -->"><!-- insert text here: project 3 link label --></a>
+      </article>
+    </section>
+
+    <section id="experience" class="section-alt">
+      <h2><!-- insert text here: Experience section title --></h2>
+
+      <div class="card">
+        <h3 class="card-title"><!-- insert text here: role / position title --></h3>
+        <p class="card-text"><!-- insert text here: organization and timeframe --></p>
+        <p class="card-text"><!-- insert text here: role bullets condensed in prose --></p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title"><!-- insert text here: second role / position title --></h3>
+        <p class="card-text"><!-- insert text here: organization and timeframe --></p>
+        <p class="card-text"><!-- insert text here: role bullets condensed in prose --></p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2><!-- insert text here: Contact section title --></h2>
+      <p><!-- insert text here: short contact intro sentence --></p>
+      <form>
+        <label>
+          <!-- insert text here: label name -->
+          <input type="text" name="name" placeholder="<!-- insert text here: placeholder name -->" />
+        </label>
+        <label>
+          <!-- insert text here: label email -->
+          <input type="email" name="email" placeholder="<!-- insert text here: placeholder email -->" />
+        </label>
+        <label>
+          <!-- insert text here: label message -->
+          <textarea name="message" placeholder="<!-- insert text here: placeholder message -->"></textarea>
+        </label>
+        <button type="submit"><!-- insert text here: send button label --></button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><!-- insert text here: footer text, e.g. © year name --></p>
+    <p><!-- insert text here: secondary footer line, e.g. built with love / tools --></p>
+  </footer>
+</body>
+</html>
