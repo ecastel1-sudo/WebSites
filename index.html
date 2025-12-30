@@ -1,343 +1,508 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <title><!-- insert text here: page title --></title>
-  <meta name="description" content="<!-- insert text here: meta description -->" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Keep original font imports here -->
-  <!-- Example (keep whatever is in your original file) -->
- 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=YourFont:wght@400;600&display=swap" rel="stylesheet">
-  </script>
-    <!-- Start of headStart -->
+  <!-- Akzidenz-Grotesk (title) -->
+  <link href="https://fonts.cdnfonts.com/css/akzidenzgrotesk" rel="stylesheet"> <!-- [web:10] -->
+  <!-- Montserrat (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"> <!-- [web:13] -->
 
-
-    <!-- End of headStart -->
-    <meta name="viewport" content="width=device-width">
-    <meta name="generator" content="Framer 8e1ebfe">
-    <title><!-- insert text here --></title>
-    <meta name="description" content="<!-- insert text here -->">
-    <meta name="framer-search-index" content="https://framerusercontent.com/sites/1zFTkrMg0VVXGlhZsYegLm/searchIndex-1mtRq9Yp9RE1.json">
-    <meta name="framer-search-index-fallback" content="https://framerusercontent.com/sites/1zFTkrMg0VVXGlhZsYegLm/searchIndex-Ft5nCUiQ16aH.json">
-    <link href="https://framerusercontent.com/images/eE1jnok8QtmsXcsnTeXMYCGOQU.png" rel="icon" media="(prefers-color-scheme: light)">
-    <link href="https://framerusercontent.com/images/UPzbt0eUSZ4yIoBt1EEHilbtVg.png" rel="icon" media="(prefers-color-scheme: dark)">
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="<!-- insert text here -->">
-    <meta property="og:description" content="<!-- insert text here -->">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<!-- insert text here -->">
-    <meta name="twitter:description" content="<!-- insert text here -->">
-
-
-    <style data-framer-font-css>
-    /* latin-ext */
-    @font-face {
-        font-family: 'Instrument Serif';
-        font-style: italic;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjgn7MsNo.woff2) format('woff2');
-        unicode-range: U + 0100-02BA, U + 02BD-02C5, U + 02C7-02CC, U + 02CE-02D7, U + 02DD-02FF, U + 0304, U + 0308, U + 0329, U + 1D00-1DBF, U + 1E00-1E9F, U + 1EF2-1EFF, U + 2020, U + 20A0-20AB, U + 20AD-20C0, U + 2113, U + 2C60-2C7F, U + A720-A7FF;
-    }/* latin */
-
-
-    @font-face {
-        font-family: 'Instrument Serif';
-        font-style: italic;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjjH7M.woff2) format('woff2');
-        unicode-range: U + 0000-00FF, U + 0131, U + 0152-0153, U + 02BB-02BC, U + 02C6, U + 02DA, U + 02DC, U + 0304, U + 0308, U + 0329, U + 2000-206F, U + 20AC, U + 2122, U + 2191, U + 2193, U + 2212, U + 2215, U + FEFF, U + FFFD;
-    }/* cyrillic-ext */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggqxSuXd.woff2) format('woff2');
-        unicode-range: U + 0460-052F, U + 1C80-1C8A, U + 20B4, U + 2DE0-2DFF, U + A640-A69F, U + FE2E-FE2F;
-    }/* cyrillic */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggOxSuXd.woff2) format('woff2');
-        unicode-range: U + 0301, U + 0400-045F, U + 0490-0491, U + 04B0-04B1, U + 2116;
-    }/* greek */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggSxSuXd.woff2) format('woff2');
-        unicode-range: U + 0370-0377, U + 037A-037F, U + 0384-038A, U + 038C, U + 038E-03A1, U + 03A3-03FF;
-    }/* vietnamese */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggixSuXd.woff2) format('woff2');
-        unicode-range: U + 0102-0103, U + 0110-0111, U + 0128-0129, U + 0168-0169, U + 01A0-01A1, U + 01AF-01B0, U + 0300-0301, U + 0303-0304, U + 0308-0309, U + 0323, U + 0329, U + 1EA0-1EF9, U + 20AB;
-    }/* latin-ext */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggmxSuXd.woff2) format('woff2');
-        unicode-range: U + 0100-02BA, U + 02BD-02C5, U + 02C7-02CC, U + 02CE-02D7, U + 02DD-02FF, U + 0304, U + 0308, U + 0329, U + 1D00-1DBF, U + 1E00-1E9F, U + 1EF2-1EFF, U + 2020, U + 20A0-20AB, U + 20AD-20C0, U + 2113, U + 2C60-2C7F, U + A720-A7FF;
-    }/* latin */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2) format('woff2');
-        unicode-range: U + 0000-00FF, U + 0131, U + 0152-0153, U + 02BB-02BC, U + 02C6, U + 02DA, U + 02DC, U + 0304, U + 0308, U + 0329, U + 2000-206F, U + 20AC, U + 2122, U + 2191, U + 2193, U + 2212, U + 2215, U + FEFF, U + FFFD;
-    }/* cyrillic-ext */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggqxSuXd.woff2) format('woff2');
-        unicode-range: U + 0460-052F, U + 1C80-1C8A, U + 20B4, U + 2DE0-2DFF, U + A640-A69F, U + FE2E-FE2F;
-    }/* cyrillic */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggOxSuXd.woff2) format('woff2');
-        unicode-range: U + 0301, U + 0400-045F, U + 0490-0491, U + 04B0-04B1, U + 2116;
-    }/* greek */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggSxSuXd.woff2) format('woff2');
-        unicode-range: U + 0370-0377, U + 037A-037F, U + 0384-038A, U + 038C, U + 038E-03A1, U + 03A3-03FF;
-    }/* vietnamese */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggixSuXd.woff2) format('woff2');
-        unicode-range: U + 0102-0103, U + 0110-0111, U + 0128-0129, U + 0168-0169, U + 01A0-01A1, U + 01AF-01B0, U + 0300-0301, U + 0303-0304, U + 0308-0309, U + 0323, U + 0329, U + 1EA0-1EF9, U + 20AB;
-    }/* latin-ext */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggmxSuXd.woff2) format('woff2');
-        unicode-range: U + 0100-02BA, U + 02BD-02C5, U + 02C7-02CC, U + 02CE-02D7, U + 02DD-02FF, U + 0304, U + 0308, U + 0329, U + 1D00-1DBF, U + 1E00-1E9F, U + 1EF2-1EFF, U + 2020, U + 20A0-20AB, U + 20AD-20C0, U + 2113, U + 2C60-2C7F, U + A720-A7FF;
-    }/* latin */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2) format('woff2');
-        unicode-range: U + 0000-00FF, U + 0131, U + 0152-0153, U + 02BB-02BC, U + 02C6, U + 02DA, U + 02DC, U + 0304, U + 0308, U + 0329, U + 2000-206F, U + 20AC, U + 2122, U + 2191, U + 2193, U + 2212, U + 2215, U + FEFF, U + FFFD;
-    }/* cyrillic-ext */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggqxSuXd.woff2) format('woff2');
-        unicode-range: U + 0460-052F, U + 1C80-1C8A, U + 20B4, U + 2DE0-2DFF, U + A640-A69F, U + FE2E-FE2F;
-    }/* cyrillic */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggOxSuXd.woff2) format('woff2');
-        unicode-range: U + 0301, U + 0400-045F, U + 0490-0491, U + 04B0-04B1, U + 2116;
-    }/* greek */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggSxSuXd.woff2) format('woff2');
-        unicode-range: U + 0370-0377, U + 037A-037F, U + 0384-038A, U + 038C, U + 038E-03A1, U + 03A3-03FF;
-    }/* vietnamese */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggixSuXd.woff2) format('woff2');
-        unicode-range: U + 0102-0103, U + 0110-0111, U + 0128-0129, U + 0168-0169, U + 01A0-01A1, U + 01AF-01B0, U + 0300-0301, U + 0303-0304, U + 0308-0309, U + 0323, U + 0329, U + 1EA0-1EF9, U + 20AB;
-    }/* latin-ext */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggmxSuXd.woff2) format('woff2');
-        unicode-range: U + 0100-02BA, U + 02BD-02C5, U + 02C7-02CC, U + 02CE-02D7, U + 02DD-02FF, U + 0304, U + 0308, U + 0329, U + 1D00-1DBF, U + 1E00-1E9F, U + 1EF2-1EFF, U + 2020, U + 20A0-20AB, U + 20AD-20C0, U + 2113, U + 2C60-2C7F, U + A720-A7FF;
-    }/* latin */
-
-
-    @font-face {
-        font-family: 'Manrope';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2) format('woff2');
-        unicode-range: U + 0000-00FF, U + 0131, U + 0152-0153, U + 02BB-02BC, U + 02C6, U + 02DA, U + 02DC, U + 0304, U + 0308, U + 0329, U + 2000-206F, U + 20AC, U + 2122, U + 2191, U + 2193, U + 2212, U + 2215, U + FEFF, U + FFFD;
-    }
-
-
-    @font-face {
-        font-family: "Inter";
-        src: url("https://framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2");
-        font-display: swap;
-        font-style: normal;
-        font-weight: 400;
-        unicode-range: U + 0460-052F, U + 1C80-1C88, U + 20B4, U + 2DE0-2DFF, U + A640-A69F, U + FE2E-FE2F
-    }
-
-    <!-- rest of @font-face rules unchanged ... -->
-
-    @font-face {
-        font-family: "Inter Placeholder";
-        src: local("Arial");
-        ascent-override: 89.79%;
-        descent-override: 22.36%;
-        line-gap-override: 0.00%;
-        size-adjust: 107.89%
-    }
-    </style>
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <meta name="robots" content="max-image-preview:large">
-    <link rel="canonical" href="https://mobiusindustry.com/">
-    <meta property="og:url" content="https://mobiusindustry.com/">
-    <style data-framer-breakpoint-css>
-    @media (min-width: 1200px) {
-        .hidden-72rtr7 {
-            display:none !important
-        }
-    }
-
-    @media (min-width: 810px) and(max-width: 1199.98px) {
-        .hidden-2cpc4p {
-            display:none !important
-        }
-    }
-
-    @media (max-width: 809.98px) {
-        .hidden-116cfrr {
-            display:none !important
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .hidden-1hmb5zu {
-            display:none !important
-        }
-    }
-
-    @media (min-width: 810px) and(max-width: 1199.98px) {
-        .hidden-1g7ibwx {
-            display:none !important
-        }
-    }
-
-    @media (max-width: 809.98px) {
-        .hidden-1c9liu7 {
-            display: none !important
-        }
-    }
-    </style>
-    <style data-framer-css-ssr-minified data-framer-components="framer-lib-cursors-host framer-SOM6o PropertyOverrides framer-EdF0Q framer-lib-combinedCSSRules framer-amJ3j framer-P80yQ framer-vHNMN framer-xPrLN framer-leiUO framer-ykvSM framer-3MRN4 framer-pw5pi framer-xLCVJ framer-vY3i3 framer-UuekV">
-    html, body, #main {
-        box-sizing: border-box;
-        margin: 0;
-        padding:0
-    }
-
+  <style>
     :root {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing:grayscale
+      --token-e7580645-294b-4fb1-bde8-c21a5a3f7676: #F6FFF8;
+      --token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414: #6B9080;
+      --token-7ab5faa8-d17b-41d2-8b42-49368cf2f4df: #A4C3B2;
+      --token-dbae631d-d751-404b-ae6d-1639e29be314: #6B9080;
+      --token-183b5922-d0ea-48d1-af7c-77d51908fd54: #CCE3DE;
+      --token-7393ce13-c09e-45e1-9c23-2264be9919ea: #EAF4F400;
+      --token-a94f824d-9740-42c5-b0f6-0397fd7c5912: #A4C3B2;
+      --token-b7cf0ea6-8c98-4bb8-9e1a-bf619580c5b9: #CCE3DE94;
+      --token-afddf2fe-7319-4f1f-8983-04ae72224770: #6B908026;
+      --token-6cedf7b6-02f5-4b59-841f-2927bb02cad3: #6B9080;
+      --token-740fa33b-ede5-4deb-934f-9e46b39c97d6: #EAF4F4a3;
     }
 
     * {
-        box-sizing: border-box;
-        -webkit-font-smoothing:inherit
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    h1, h2, h3, h4, h5, h6, p, figure {
-        margin:0
-    }
-
-    body, input, textarea, select, button {
-        font-family: sans-serif;
-        font-size:12px
+    html {
+      scroll-behavior: smooth; /* in-page smooth scroll [web:12][web:15] */
     }
 
     body {
-        --token-e7580645-294b-4fb1-bde8-c21a5a3f7676: #F6FFF8;
-        --token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414: #6B9080;
-        --token-7ab5faa8-d17b-41d2-8b42-49368cf2f4df: #A4C3B2;
-        --token-dbae631d-d751-404b-ae6d-1639e29be314: #6B9080;
-        --token-183b5922-d0ea-48d1-af7c-77d51908fd54: #CCE3DE;
-        --token-7393ce13-c09e-45e1-9c23-2264be9919ea: #EAF4F400;
-        --token-a94f824d-9740-42c5-b0f6-0397fd7c5912: #A4C3B2;
-        --token-b7cf0ea6-8c98-4bb8-9e1a-bf619580c5b9: #CCE3DE94;
-        --token-afddf2fe-7319-4f1f-8983-04ae72224770: #6B908026;
-        --token-6cedf7b6-02f5-4b59-841f-2927bb02cad3: #6B9080;
-        --token-740fa33b-ede5-4deb-934f-9e46b39c97d6: #EAF4F4a3;
-        --framer-will-change-override:none
+      font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--token-e7580645-294b-4fb1-bde8-c21a5a3f7676);
+      color: var(--token-6cedf7b6-02f5-4b59-841f-2927bb02cad3);
+      line-height: 1.6;
     }
-    ```
 
-From here, repeat the same two edits through the rest of the file: swap any remaining old hex colors to your five, and replace inner text of headings/paragraphs/spans (but not structure or styles) with `<!-- insert text here -->`.[1]
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Top navigation */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: linear-gradient(
+        to right,
+        var(--token-183b5922-d0ea-48d1-af7c-77d51908fd54),
+        var(--token-740fa33b-ede5-4deb-934f-9e46b39c97d6)
+      );
+      border-bottom: 1px solid var(--token-b7cf0ea6-8c98-4bb8-9e1a-bf619580c5b9);
+    }
+
+    .nav-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .brand {
+      font-family: 'AkzidenzGrotesk', system-ui, sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+    }
+
+    nav a {
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
+      background-color: transparent;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--token-b7cf0ea6-8c98-4bb8-9e1a-bf619580c5b9);
+      transform: translateY(-1px);
+    }
+
+    /* Layout wrappers */
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 6.5rem 1.5rem 4rem; /* top padding accounts for fixed header */
+    }
+
+    section {
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid var(--token-b7cf0ea6-8c98-4bb8-9e1a-bf619580c5b9);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+      padding-bottom: 5rem;
+    }
+
+    .section-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--token-a94f824d-9740-42c5-b0f6-0397fd7c5912);
+      margin-bottom: 0.35rem;
+    }
+
+    .section-title {
+      font-family: 'AkzidenzGrotesk', system-ui, sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
+      margin-bottom: 0.35rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--token-dbae631d-d751-404b-ae6d-1639e29be314);
+      max-width: 520px;
+    }
+
+    /* Content blocks */
+
+    .blocks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.75rem;
+    }
+
+    .block {
+      background-color: #ffffff;
+      border-radius: 16px;
+      border: 1px solid var(--token-b7cf0ea6-8c98-4bb8-9e1a-bf619580c5b9);
+      box-shadow: 0 10px 30px var(--token-afddf2fe-7319-4f1f-8983-04ae72224770);
+      padding: 1.4rem 1.4rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .block-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .block-text {
+      font-size: 0.9rem;
+      color: var(--token-dbae631d-d751-404b-ae6d-1639e29be314);
+      min-height: 3rem;
+    }
+
+    .block-media {
+      margin-top: 0.5rem;
+      min-height: 140px;
+      border-radius: 12px;
+      border: 1px dashed var(--token-7ab5faa8-d17b-41d2-8b42-49368cf2f4df);
+      background: linear-gradient(
+        135deg,
+        var(--token-183b5922-d0ea-48d1-af7c-77d51908fd54),
+        var(--token-e7580645-294b-4fb1-bde8-c21a5a3f7676)
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      opacity: 0.9;
+    }
+
+    /* Hero with dropping letters */
+
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 0 2rem;
+    }
+
+    .hero-title {
+      font-family: 'AkzidenzGrotesk', system-ui, sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
+      display: inline-flex;
+      gap: 0.08em;
+      overflow: hidden;
+    }
+
+    .hero-title span {
+      display: inline-block;
+      transform: translateY(-120%);
+      opacity: 0;
+      animation: letterDrop 0.7s forwards;
+    }
+
+    /* stagger via nth-child */
+    .hero-title span:nth-child(1) { animation-delay: 0.00s; }
+    .hero-title span:nth-child(2) { animation-delay: 0.05s; }
+    .hero-title span:nth-child(3) { animation-delay: 0.10s; }
+    .hero-title span:nth-child(4) { animation-delay: 0.15s; }
+    .hero-title span:nth-child(5) { animation-delay: 0.20s; }
+    .hero-title span:nth-child(6) { animation-delay: 0.25s; }
+    .hero-title span:nth-child(7) { animation-delay: 0.30s; }
+    .hero-title span:nth-child(8) { animation-delay: 0.35s; }
+    .hero-title span:nth-child(9) { animation-delay: 0.40s; }
+    .hero-title span:nth-child(10){ animation-delay: 0.45s; }
+
+    @keyframes letterDrop {
+      0% {
+        transform: translateY(-120%);
+        opacity: 0;
+      }
+      70% {
+        transform: translateY(6%);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+    }
+
+    .hero-subtitle {
+      margin-top: 1.2rem;
+      font-size: 1rem;
+      max-width: 520px;
+      color: var(--token-dbae631d-d751-404b-ae6d-1639e29be314);
+    }
+
+    .hero-cta-row {
+      margin-top: 1.8rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .pill-button {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 0.7rem 1.5rem;
+      border-radius: 999px;
+      border: 1px solid var(--token-7ab5faa8-d17b-41d2-8b42-49368cf2f4df);
+      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
+      background-color: #ffffff;
+      box-shadow: 0 10px 30px var(--token-afddf2fe-7319-4f1f-8983-04ae72224770);
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+    }
+
+    .pill-button.secondary {
+      background-color: var(--token-183b5922-d0ea-48d1-af7c-77d51908fd54);
+    }
+
+    .pill-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 36px var(--token-afddf2fe-7319-4f1f-8983-04ae72224770);
+      background-color: var(--token-7ab5faa8-d17b-41d2-8b42-49368cf2f4df);
+      color: #ffffff;
+    }
+
+    footer {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 3rem;
+      font-size: 0.8rem;
+      color: var(--token-a94f824d-9740-42c5-b0f6-0397fd7c5912);
+    }
+
+    @media (max-width: 600px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero {
+        padding-top: 5rem;
+      }
+      .hero-title {
+        letter-spacing: 0.18em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <div class="brand"><!-- insert text here: small brand (e.g., EC / Emma Castelli) --></div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#my-story">My story</a>
+        <a href="#vision">Vision</a>
+        <a href="#projects">Projects</a>
+        <a href="#sports">Sports</a>
+        <a href="#thoughtspace">Thoughtspace</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <h1 class="hero-title" aria-label="Emma Castelli">
+        <!-- Write your name, one span per character (including spaces if you like) -->
+        <span>E</span><span>M</span><span>M</span><span>A</span>
+        <span>&nbsp;</span>
+        <span>C</span><span>A</span><span>S</span><span>T</span><span>E</span><span>L</span><span>L</span><span>I</span>
+      </h1>
+
+      <p class="hero-subtitle"><!-- insert text here: one-line subtitle / role description --></p>
+
+      <div class="hero-cta-row">
+        <a href="#projects" class="pill-button"><!-- insert text here: primary CTA (e.g., View projects) --></a>
+        <a href="#about" class="pill-button secondary"><!-- insert text here: secondary CTA (e.g., Learn more) --></a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="section-header">
+        <div class="section-label">Section 01</div>
+        <h2 class="section-title">About</h2>
+        <p class="section-subtitle"><!-- insert text here: short description of the section --></p>
+      </div>
+
+      <div class="blocks">
+        <article class="block">
+          <div class="block-title"><!-- insert text here: block title (e.g., Who I am) --></div>
+          <div class="block-text"><!-- insert text here: body text --></div>
+          <div class="block-media">Image / Illustration</div>
+        </article>
+
+        <article class="block">
+          <div class="block-title"><!-- insert text here: block title --></div>
+          <div class="block-text"><!-- insert text here: body text --></div>
+          <div class="block-media">Image / Illustration</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- My story -->
+    <section id="my-story">
+      <div class="section-header">
+        <div class="section-label">Section 02</div>
+        <h2 class="section-title">My story</h2>
+        <p class="section-subtitle"><!-- insert text here: short narrative hook --></p>
+      </div>
+
+      <div class="blocks">
+        <article class="block">
+          <div class="block-title"><!-- insert text here: chapter / phase title --></div>
+          <div class="block-text"><!-- insert text here: body text --></div>
+          <div class="block-media">Image / Timeline visual</div>
+        </article>
+
+        <article class="block">
+          <div class="block-title"><!-- insert text here: chapter / phase title --></div>
+          <div class="block-text"><!-- insert text here: body text --></div>
+          <div class="block-media">Image / Timeline visual</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Vision -->
+    <section id="vision">
+      <div class="section-header">
+        <div class="section-label">Section 03</div>
+        <h2 class="section-title">Vision</h2>
+        <p class="section-subtitle"><!-- insert text here: what you care about long-term --></p>
+      </div>
+
+      <div class="blocks">
+        <article class="block">
+          <div class="block-title"><!-- insert text here: pillar title --></div>
+          <div class="block-text"><!-- insert text here: body text --></div>
+          <div class="block-media">Diagram / Concept art</div>
+        </article>
+
+        <article class="block">
+          <div class="block-title"><!-- insert text here: pillar title --></div>
+          <div class="block-text"><!-- insert text here: body text --></div>
+          <div class="block-media">Diagram / Concept art</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="section-header">
+        <div class="section-label">Section 04</div>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle"><!-- insert text here: one-line overview of your work --></p>
+      </div>
+
+      <div class="blocks">
+        <article class="block">
+          <div class="block-title"><!-- insert text here: project name --></div>
+          <div class="block-text"><!-- insert text here: short project description --></div>
+          <div class="block-media">Screenshot / Poster</div>
+        </article>
+
+        <article class="block">
+          <div class="block-title"><!-- insert text here: project name --></div>
+          <div class="block-text"><!-- insert text here: short project description --></div>
+          <div class="block-media">Screenshot / Poster</div>
+        </article>
+
+        <article class="block">
+          <div class="block-title"><!-- insert text here: project name --></div>
+          <div class="block-text"><!-- insert text here: short project description --></div>
+          <div class="block-media">Screenshot / Poster</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sports -->
+    <section id="sports">
+      <div class="section-header">
+        <div class="section-label">Section 05</div>
+        <h2 class="section-title">Sports</h2>
+        <p class="section-subtitle"><!-- insert text here: how sports fit into your life --></p>
+      </div>
+
+      <div class="blocks">
+        <article class="block">
+          <div class="block-title"><!-- insert text here: sport / activity --></div>
+          <div class="block-text"><!-- insert text here: notes / milestones --></div>
+          <div class="block-media">Photo / Action shot</div>
+        </article>
+
+        <article class="block">
+          <div class="block-title"><!-- insert text here: sport / activity --></div>
+          <div class="block-text"><!-- insert text here: notes / milestones --></div>
+          <div class="block-media">Photo / Action shot</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Thoughtspace -->
+    <section id="thoughtspace">
+      <div class="section-header">
+        <div class="section-label">Section 06</div>
+        <h2 class="section-title">Thoughtspace</h2>
+        <p class="section-subtitle"><!-- insert text here: description of this section (notes, essays, sketches) --></p>
+      </div>
+
+      <div class="blocks">
+        <article class="block">
+          <div class="block-title"><!-- insert text here: note / essay title --></div>
+          <div class="block-text"><!-- insert text here: short excerpt or idea --></div>
+          <div class="block-media">Sketch / Diagram</div>
+        </article>
+
+        <article class="block">
+          <div class="block-title"><!-- insert text here: note / essay title --></div>
+          <div class="block-text"><!-- insert text here: short excerpt or idea --></div>
+          <div class="block-media">Sketch / Diagram</div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- insert text here: footer text, e.g. © 2025 Emma Castelli · emmacastelli.com -->
+  </footer>
+</body>
+</html>
