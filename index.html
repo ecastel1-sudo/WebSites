@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,24 +5,33 @@
   <title>Emma S. Castelli</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Akzidenz-Grotesk (title) -->
-  <link href="https://fonts.cdnfonts.com/css/akzidenzgrotesk" rel="stylesheet"> <!-- [web:10] -->
+  <!-- Raleway (titles) -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
   <!-- Montserrat (body) -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"> <!-- [web:13] -->
 
   <style>
     :root {
-      --token-e7580645-294b-4fb1-bde8-c21a5a3f7676: #F6FFF8;
-      --token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414: #6B9080;
-      --token-7ab5faa8-d17b-41d2-8b42-49368cf2f4df: #A4C3B2;
-      --token-dbae631d-d751-404b-ae6d-1639e29be314: #6B9080;
-      --token-183b5922-d0ea-48d1-af7c-77d51908fd54: #CCE3DE;
-      --token-7393ce13-c09e-45e1-9c23-2264be9919ea: #EAF4F400;
-      --token-a94f824d-9740-42c5-b0f6-0397fd7c5912: #A4C3B2;
-      --token-b7cf0ea6-8c98-4bb8-9e1a-bf619580c5b9: #CCE3DE94;
-      --token-afddf2fe-7319-4f1f-8983-04ae72224770: #6B908026;
-      --token-6cedf7b6-02f5-4b59-841f-2927bb02cad3: #6B9080;
-      --token-740fa33b-ede5-4deb-934f-9e46b39c97d6: #EAF4F4a3;
+      /* Core palette */
+      --col-black: #000000;
+      --col-deep-navy: #14213D;
+      --col-accent: #FCA311;
+      --col-soft-grey: #E5E5E5;
+      --col-white: #FFFFFF;
+      --col-alt: #F5F6F8;
+
+      /* Tokens mapped to your old variable names */
+      --token-e7580645-294b-4fb1-bde8-c21a5a3f7676: var(--col-alt);          /* base background */
+      --token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414: var(--col-deep-navy);    /* primary text */
+      --token-7ab5faa8-d17b-41d2-8b42-49368cf2f4df: var(--col-accent);       /* strong accent */
+      --token-dbae631d-d751-404b-ae6d-1639e29be314: #444750;                 /* body text */
+      --token-183b5922-d0ea-48d1-af7c-77d51908fd54: var(--col-soft-grey);    /* light panels */
+      --token-7393ce13-c09e-45e1-9c23-2264be9919ea: #F5F6F800;               /* transparent */
+      --token-a94f824d-9740-42c5-b0f6-0397fd7c5912: #6B6F7A;                 /* muted text */
+      --token-b7cf0ea6-8c98-4bb8-9e1a-bf619580c5b9: #D3D5DD;                 /* subtle border */
+      --token-afddf2fe-7319-4f1f-8983-04ae72224770: #14213D26;               /* shadow tint */
+      --token-6cedf7b6-02f5-4b59-841f-2927bb02cad3: var(--col-black);        /* darkest text */
+      --token-740fa33b-ede5-4deb-934f-9e46b39c97d6: #FFFFFFCC;               /* overlay */
     }
 
     * {
@@ -33,7 +41,7 @@
     }
 
     html {
-      scroll-behavior: smooth; /* in-page smooth scroll [web:12][web:15] */
+      scroll-behavior: smooth;
     }
 
     body {
@@ -59,10 +67,11 @@
       backdrop-filter: blur(12px);
       background: linear-gradient(
         to right,
-        var(--token-183b5922-d0ea-48d1-af7c-77d51908fd54),
-        var(--token-740fa33b-ede5-4deb-934f-9e46b39c97d6)
+        rgba(20, 33, 61, 0.96),
+        rgba(0, 0, 0, 0.96)
       );
       border-bottom: 1px solid var(--token-b7cf0ea6-8c98-4bb8-9e1a-bf619580c5b9);
+      color: var(--col-white);
     }
 
     .nav-inner {
@@ -76,11 +85,11 @@
     }
 
     .brand {
-      font-family: 'AkzidenzGrotesk', system-ui, sans-serif;
+      font-family: 'Raleway', system-ui, sans-serif;
       font-size: 1rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
+      color: var(--col-soft-grey);
       white-space: nowrap;
     }
 
@@ -94,15 +103,18 @@
     }
 
     nav a {
-      padding: 0.3rem 0.6rem;
+      padding: 0.3rem 0.9rem;
       border-radius: 999px;
-      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
+      color: var(--col-soft-grey);
       background-color: transparent;
-      transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+      border: 1px solid transparent;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
     }
 
     nav a:hover {
-      background-color: var(--token-b7cf0ea6-8c98-4bb8-9e1a-bf619580c5b9);
+      background-color: rgba(252, 163, 17, 0.1);
+      border-color: var(--col-accent);
+      color: var(--col-accent);
       transform: translateY(-1px);
     }
 
@@ -115,13 +127,39 @@
     }
 
     section {
-      padding: 4rem 0 3rem;
+      padding: 4rem 1.5rem 3rem;
       border-bottom: 1px solid var(--token-b7cf0ea6-8c98-4bb8-9e1a-bf619580c5b9);
     }
 
     section:last-of-type {
       border-bottom: none;
       padding-bottom: 5rem;
+    }
+
+    /* Alternating section backgrounds */
+
+    #about {
+      background-color: #F5F6F8;
+    }
+
+    #my-story {
+      background-color: #FFFFFF;
+    }
+
+    #vision {
+      background-color: #F5F6F8;
+    }
+
+    #projects {
+      background-color: #E5E5E5;
+    }
+
+    #sports {
+      background-color: #F5F6F8;
+    }
+
+    #thoughtspace {
+      background-color: #FFFFFF;
     }
 
     .section-header {
@@ -137,18 +175,19 @@
     }
 
     .section-title {
-      font-family: 'AkzidenzGrotesk', system-ui, sans-serif;
+      font-family: 'Raleway', system-ui, sans-serif;
+      font-weight: 600;
       font-size: 1.6rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
+      color: var(--col-deep-navy);
       margin-bottom: 0.35rem;
     }
 
     .section-subtitle {
       font-size: 0.95rem;
       color: var(--token-dbae631d-d751-404b-ae6d-1639e29be314);
-      max-width: 520px;
+      max-width: 620px;
     }
 
     /* Content blocks */
@@ -161,7 +200,7 @@
     }
 
     .block {
-      background-color: #ffffff;
+      background-color: var(--col-white);
       border-radius: 16px;
       border: 1px solid var(--token-b7cf0ea6-8c98-4bb8-9e1a-bf619580c5b9);
       box-shadow: 0 10px 30px var(--token-afddf2fe-7319-4f1f-8983-04ae72224770);
@@ -174,7 +213,7 @@
     .block-title {
       font-size: 0.95rem;
       font-weight: 600;
-      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
+      color: var(--col-deep-navy);
       text-transform: uppercase;
       letter-spacing: 0.12em;
     }
@@ -189,22 +228,24 @@
       margin-top: 0.5rem;
       min-height: 140px;
       border-radius: 12px;
-      border: 1px dashed var(--token-7ab5faa8-d17b-41d2-8b42-49368cf2f4df);
+      border: 1px dashed rgba(20, 33, 61, 0.35);
       background: linear-gradient(
         135deg,
-        var(--token-183b5922-d0ea-48d1-af7c-77d51908fd54),
-        var(--token-e7580645-294b-4fb1-bde8-c21a5a3f7676)
+        rgba(229, 229, 229, 0.95),
+        #FFFFFF
       );
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.8rem;
-      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
+      color: var(--col-deep-navy);
       text-transform: uppercase;
       letter-spacing: 0.16em;
       opacity: 0.9;
     }
-            /* Scroll reveal */
+
+    /* Scroll reveal (if you decide to hook it up later) */
+
     .reveal {
       opacity: 0;
       transform: translateY(24px);
@@ -229,15 +270,17 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 4rem 0 2rem;
+      padding: 4rem 1.5rem 2rem;
+      background: radial-gradient(circle at top, #FFFFFF, #F5F6F8);
     }
 
     .hero-title {
-      font-family: 'AkzidenzGrotesk', system-ui, sans-serif;
+      font-family: 'Raleway', system-ui, sans-serif;
+      font-weight: 600;
       font-size: clamp(2.8rem, 5vw, 4rem);
       letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
+      color: var(--col-deep-navy);
       display: inline-flex;
       gap: 0.08em;
       overflow: hidden;
@@ -250,7 +293,6 @@
       animation: letterDrop 0.7s forwards;
     }
 
-    /* stagger via nth-child */
     .hero-title span:nth-child(1) { animation-delay: 0.00s; }
     .hero-title span:nth-child(2) { animation-delay: 0.05s; }
     .hero-title span:nth-child(3) { animation-delay: 0.10s; }
@@ -298,23 +340,26 @@
       letter-spacing: 0.16em;
       padding: 0.7rem 1.5rem;
       border-radius: 999px;
-      border: 1px solid var(--token-7ab5faa8-d17b-41d2-8b42-49368cf2f4df);
-      color: var(--token-dcb5abee-f4cc-4336-9800-a1eb8a5b9414);
-      background-color: #ffffff;
+      border: 1px solid rgba(20, 33, 61, 0.4);
+      color: var(--col-deep-navy);
+      background-color: var(--col-white);
       box-shadow: 0 10px 30px var(--token-afddf2fe-7319-4f1f-8983-04ae72224770);
       cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     }
 
     .pill-button.secondary {
-      background-color: var(--token-183b5922-d0ea-48d1-af7c-77d51908fd54);
+      background-color: var(--col-deep-navy);
+      color: var(--col-soft-grey);
+      border-color: var(--col-deep-navy);
     }
 
     .pill-button:hover {
       transform: translateY(-1px);
       box-shadow: 0 14px 36px var(--token-afddf2fe-7319-4f1f-8983-04ae72224770);
-      background-color: var(--token-7ab5faa8-d17b-41d2-8b42-49368cf2f4df);
-      color: #ffffff;
+      background-color: var(--col-accent);
+      color: var(--col-black);
+      border-color: var(--col-accent);
     }
 
     footer {
@@ -337,18 +382,18 @@
         letter-spacing: 0.18em;
       }
     }
-   /* this is to make the text in my story to be aligned in the center*/
-    #my-story {
-  text-align: center;
-  justify-content: left;
-    }
 
+    /* Center long text inside #my-story only if you want it */
+    #my-story .section-subtitle,
+    #my-story .section-header p {
+      text-align: left; /* change to center if you prefer */
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="nav-inner">
-      <div class="brand"><t>EMMA SARA CASTELLI</t></div>
+      <div class="brand">EMMA SARA CASTELLI</div>
       <nav>
         <a href="#about">About</a>
         <a href="#my-story">My story</a>
@@ -364,7 +409,6 @@
     <!-- Hero -->
     <section class="hero" id="top">
       <h1 class="hero-title" aria-label="Emma Castelli">
-        <!-- Write your name, one span per character (including spaces if you like) -->
         <span>E</span><span>M</span><span>M</span><span>A</span>
         <span>&nbsp;</span>
         <span>S</span><span>A</span><span>R</span><span>A</span>
@@ -372,11 +416,11 @@
         <span>C</span><span>A</span><span>S</span><span>T</span><span>E</span><span>L</span><span>L</span><span>I</span>
       </h1>
 
-      <p class="hero-subtitle"><t>Molecular Biologist - Bioengineer - Quantum Chemistry enthusiast</t></p>
+      <p class="hero-subtitle">Molecular Biologist · Bioengineer · Quantum Chemistry enthusiast</p>
 
       <div class="hero-cta-row">
-        <a href="#projects" class="pill-button"><t> Projects </t></a>
-        <a href="#about" class="pill-button secondary"><t> About </t></a>
+        <a href="#projects" class="pill-button">Projects</a>
+        <a href="#about" class="pill-button secondary">About</a>
       </div>
     </section>
 
@@ -385,19 +429,25 @@
       <div class="section-header">
         <div class="section-label">Learn more about me</div>
         <h2 class="section-title">About</h2>
-        <p class="section-subtitle">Hi, I'm Emma! Fancy seeing you here.</p>
-        <p>I am a Molecular Life Sciences stuent at UNIL, currently finishing my MSc focusing on Bioengineering and protein design. I come from italy, where I have completed the Maturità di Liceo Scientifico in 2021. I then moved to the Netherlands, where I obtained a BSc (Cum Laude) in Liberal Arts and Life Sciences studying at University College Venlo (UM). I then moved to Lausanne - where I am currently based. Right now, I am finishing my MSc at EPFL, working on a prototype for Rare Earth Elements recovery from electronic waste. Aside from projects and academics, I throughly enjoy outdoor activities, especially sailig, cycling and running, and winter sports. I am also interested in psychology and sociology, and I enjoy reading classics - especially Dostoevsky.</p>
+        <p class="section-subtitle">Hi, I'm Emma. Fancy seeing you here.</p>
+        <p>
+          I am a Molecular Life Sciences student at UNIL, currently finishing my MSc focusing on bioengineering and protein design. I come from Italy, where I completed the
+          <em>Maturità di Liceo Scientifico</em> in 2021, before moving to the Netherlands to study at University College Venlo (UM), where I obtained a BSc (Cum Laude) in Liberal Arts and Life Sciences.
+          I now live in Lausanne, finishing my MSc while working on a prototype for rare earth element recovery from electronic waste.
+          Outside the lab, I love sailing, cycling, running, winter sports, and I am deeply curious about psychology, sociology, and classic literature.
+        </p>
       </div>
 
       <div class="blocks">
         <article class="block">
           <div class="block-title">Hello!</div>
-          <div class="block-text">Here is a picture of me sailing</div>
+          <div class="block-text">Here is a picture of me sailing.</div>
           <div class="block-media">Image / Illustration</div>
         </article>
 
         <article class="block">
-        
+          <div class="block-title">Another snapshot</div>
+          <div class="block-text">Space for a second image or visual.</div>
           <div class="block-media">Image / Illustration</div>
         </article>
       </div>
@@ -408,23 +458,57 @@
       <div class="section-header">
         <div class="section-label">How it all started</div>
         <h2 class="section-title">My story</h2>
-        <p class="section-subtitle" style="justify-content:left;"> <p>When I was two, my father first took me sailing, passing on a family tradition that quickly became my own. Since joining the pre‑competition Optimist team in Bellano at six and racing from eight, sailing has been a constant thread in my life, shaping how I think about discipline, resilience, and ambition. As a teenager I tried to “graduate” to the Laser, but my frame did not quite match the boat, so I stepped away from sailing for a couple of years and experimented with tennis, even competing a bit. In 2018, everything changed again when I joined a Hobie Cat 16 team in Dervio and became crew on the HC16, eventually racing on the Italian national team and at the 2019 European Championship in La Rochelle.</p> <p>Those Opti and Hobie years – early mornings, long trainings, wins, losses, and a fair amount of trauma and joy – were profoundly formative and taught me that any kind of <h4>success is earned only through hard, patient work.</h4> Covid disrupted that rhythm. In 2020 my helmsman and I transitioned to the 29er and joined Yacht Club Como, spending the pandemic years training and racing whenever restrictions allowed. I was lucky to be able to go out on the water, but mentally it was still a low period, and my relationship with performance and pressure shifted. Around then I picked up running, eventually racing my first half marathon (the Venloop) in 2022, and I have not really stopped running since. </p> <p> Academically, after Liceo I moved from my small‑town context to Venlo in the Netherlands to study at University College Venlo. I was curious about how food, exercise, and other external factors modulate biomolecular processes, so I gravitated toward nutrition science, molecular biology, and biochemistry, and sprinkled in social sciences to make sense of the strange systems we live in. The campus, however, was tiny and not very intellectually stimulating, and I went through a burnout that came less from overwork than from lack of real challenge. During my final bachelor year I relocated to Maastricht for my thesis and more molecular biology courses, by which point I knew genes and bio‑molecular mechanisms were what fascinated me most. Maastricht was my first encounter with an actual university ecosystem: more than twenty people around me, student life, and a feeling of community I had never really experienced while I was busy just sailing and studying. I also started swimming and cycling, tentatively moving toward triathlon and discovering that my body and mind could handle more than I thought. </p>
-<p>For my Master’s I chose Lausanne, joining the MLS program at UNIL to deepen my molecular biology and bioengineering skills. Moving there turned out to be one of my best decisions: the environment is intellectually demanding, creatively charged, and full of people who push themselves. I joined Lausanne Run Club as a pacer and finally committed to training for my first triathlon, which I raced in August 2025, and I re‑entered competitive sailing through the Swiss Sailing League on the J/70 circuit and the Women’s League, skippering and doing tactics for LUC Voile, the University team.</p>
-<p>The real inflection point, though, was leading the UNIL iGEM team over the summer of 2025. Until then, a lab semester project had convinced me I was headed for academia; those months also exposed me to how insulated and self‑referential academic work can become when “interesting experiments” are detached from real‑world impact. iGEM flipped that script. Working with a small, driven team showed me how much is possible in a few months when focus, discipline, and shared purpose align, and it rekindled my belief that bioengineering can and should build tangible solutions. Our project collected prizes and recognition, but what mattered most was glimpsing the impact it might have if we kept pushing. Together with Chloé and Julien from the team, I decided not to let that momentum evaporate. Today, three of us are turning that project into a company, and they keep reminding me how essential diversity, complementary energy, and a balanced ecosystem are – in teams, in science, and in life. </p>
-<p>This is, roughly, where my story stands for now: shaped by wind and water, by a few missteps and re‑routes, and by the conviction that science has meaning only when it moves beyond the lab and into the world.</p>
+        <p class="section-subtitle">
+          When I was two, my father first took me sailing, passing on a family tradition that quickly became my own. Since joining the pre‑competition Optimist team in Bellano at six and racing from eight,
+          sailing has been a constant thread in my life, shaping how I think about discipline, resilience, and ambition.
         </p>
-</div>
+        <p>
+          As a teenager I tried to “graduate” to the Laser, but my frame did not quite match the boat, so I stepped away from sailing for a couple of years and experimented with tennis, even competing a bit.
+          In 2018, everything changed again when I joined a Hobie Cat 16 team in Dervio and became crew on the HC16, eventually racing on the Italian national team and at the 2019 European Championship in La Rochelle.
+          Those Opti and Hobie years – early mornings, long trainings, wins, losses, and a fair amount of trauma and joy – were profoundly formative and taught me that success is earned only through hard, patient work.
+        </p>
+        <p>
+          Covid disrupted that rhythm. In 2020 my helmsman and I transitioned to the 29er and joined Yacht Club Como, spending the pandemic years training and racing whenever restrictions allowed.
+          I was lucky to be able to go out on the water, but mentally it was still a low period, and my relationship with performance and pressure shifted. Around then I picked up running, eventually racing my first half marathon (the Venloop) in 2022, and I have not really stopped running since.
+        </p>
+        <p>
+          Academically, after Liceo I moved from my small‑town context to Venlo in the Netherlands to study at University College Venlo. Curious about how food, exercise, and other external factors modulate biomolecular processes,
+          I gravitated toward nutrition science, molecular biology, and biochemistry, and sprinkled in social sciences to make sense of the systems we live in. The campus was tiny and not very intellectually stimulating,
+          and I went through a burnout that came less from overwork than from lack of challenge.
+        </p>
+        <p>
+          During my final bachelor year I relocated to Maastricht for my thesis and more molecular biology courses, by which point I knew genes and biomolecular mechanisms were what fascinated me most.
+          Maastricht was my first encounter with an actual university ecosystem and student life. I also started swimming and cycling, tentatively moving toward triathlon and discovering that my body and mind could handle more than I thought.
+        </p>
+        <p>
+          For my Master’s I chose Lausanne, joining the MLS program at UNIL to deepen my molecular biology and bioengineering skills. Moving there turned out to be one of my best decisions:
+          the environment is intellectually demanding, creatively charged, and full of people who push themselves. I joined Lausanne Run Club as a pacer and committed to my first triathlon, which I raced in August 2025,
+          and I re‑entered competitive sailing through the Swiss Sailing League on the J/70 circuit and the Women’s League, skippering and doing tactics for LUC Voile, the university team.
+        </p>
+        <p>
+          The real inflection point, though, was leading the UNIL iGEM team over the summer of 2025. Until then, a lab semester project had convinced me I was headed for academia; those months also exposed me to how insulated and
+          self‑referential academic work can become when “interesting experiments” are detached from real‑world impact. iGEM flipped that script. Working with a small, driven team showed me how much is possible in a few months when focus,
+          discipline, and shared purpose align, and it rekindled my belief that bioengineering can and should build tangible solutions.
+        </p>
+        <p>
+          Our project collected prizes and recognition, but what mattered most was glimpsing the impact it might have if we kept pushing. Together with Chloé and Julien from the team, I decided not to let that momentum evaporate.
+          Today, the three of us are turning that project into a company, and they keep reminding me how essential diversity, complementary energy, and a balanced ecosystem are – in teams, in science, and in life.
+        </p>
+        <p>
+          This is, roughly, where my story stands for now: shaped by wind and water, by a few missteps and re‑routes, and by the conviction that science has meaning only when it moves beyond the lab and into the world.
+        </p>
+      </div>
 
       <div class="blocks">
         <article class="block">
-          <div class="block-title"><!-- insert text here: chapter / phase title --></div>
-          <div class="block-text"><!-- insert text here: body text --></div>
+          <div class="block-title">Early years</div>
+          <div class="block-text">Space for a short highlight, milestone, or quote.</div>
           <div class="block-media">Image / Timeline visual</div>
         </article>
 
         <article class="block">
-          <div class="block-title"><!-- insert text here: chapter / phase title --></div>
-          <div class="block-text"><!-- insert text here: body text --></div>
+          <div class="block-title">Today</div>
+          <div class="block-text">Space for where you are now and where you are going next.</div>
           <div class="block-media">Image / Timeline visual</div>
         </article>
       </div>
@@ -440,14 +524,14 @@
 
       <div class="blocks">
         <article class="block">
-          <div class="block-title"><!-- insert text here: pillar title --></div>
-          <div class="block-text"><!-- insert text here: body text --></div>
+          <div class="block-title"><!-- pillar title --></div>
+          <div class="block-text"><!-- body text --></div>
           <div class="block-media">Diagram / Concept art</div>
         </article>
 
         <article class="block">
-          <div class="block-title"><!-- insert text here: pillar title --></div>
-          <div class="block-text"><!-- insert text here: body text --></div>
+          <div class="block-title"><!-- pillar title --></div>
+          <div class="block-text"><!-- body text --></div>
           <div class="block-media">Diagram / Concept art</div>
         </article>
       </div>
@@ -458,25 +542,25 @@
       <div class="section-header">
         <div class="section-label">Check out my projects</div>
         <h2 class="section-title">Projects</h2>
-        <p class="section-subtitle"><!-- insert text here: one-line overview of your work --></p>
+        <p class="section-subtitle"><!-- one-line overview of your work --></p>
       </div>
 
       <div class="blocks">
         <article class="block">
-          <div class="block-title"><!-- insert text here: project name --></div>
-          <div class="block-text"><!-- insert text here: short project description --></div>
+          <div class="block-title"><!-- project name --></div>
+          <div class="block-text"><!-- short project description --></div>
           <div class="block-media">Screenshot / Poster</div>
         </article>
 
         <article class="block">
-          <div class="block-title"><!-- insert text here: project name --></div>
-          <div class="block-text"><!-- insert text here: short project description --></div>
+          <div class="block-title"><!-- project name --></div>
+          <div class="block-text"><!-- short project description --></div>
           <div class="block-media">Screenshot / Poster</div>
         </article>
 
         <article class="block">
-          <div class="block-title"><!-- insert text here: project name --></div>
-          <div class="block-text"><!-- insert text here: short project description --></div>
+          <div class="block-title"><!-- project name --></div>
+          <div class="block-text"><!-- short project description --></div>
           <div class="block-media">Screenshot / Poster</div>
         </article>
       </div>
@@ -487,19 +571,19 @@
       <div class="section-header">
         <div class="section-label">My main interest</div>
         <h2 class="section-title">Sports</h2>
-        <p class="section-subtitle"><!-- insert text here: how sports fit into your life --></p>
+        <p class="section-subtitle"><!-- how sports fit into your life --></p>
       </div>
 
       <div class="blocks">
         <article class="block">
-          <div class="block-title"><!-- insert text here: sport / activity --></div>
-          <div class="block-text"><!-- insert text here: notes / milestones --></div>
+          <div class="block-title"><!-- sport / activity --></div>
+          <div class="block-text"><!-- notes / milestones --></div>
           <div class="block-media">Photo / Action shot</div>
         </article>
 
         <article class="block">
-          <div class="block-title"><!-- insert text here: sport / activity --></div>
-          <div class="block-text"><!-- insert text here: notes / milestones --></div>
+          <div class="block-title"><!-- sport / activity --></div>
+          <div class="block-text"><!-- notes / milestones --></div>
           <div class="block-media">Photo / Action shot</div>
         </article>
       </div>
@@ -508,21 +592,21 @@
     <!-- Thoughtspace -->
     <section id="thoughtspace">
       <div class="section-header">
-        <div class="section-label">Read my unpopular opinions and self-development aphorisms</div>
+        <div class="section-label">Read my unpopular opinions and self‑development aphorisms</div>
         <h2 class="section-title">Thoughtspace</h2>
-        <p class="section-subtitle"><!-- insert text here: description of this section (notes, essays, sketches) --></p>
+        <p class="section-subtitle"><!-- description of this section (notes, essays, sketches) --></p>
       </div>
 
       <div class="blocks">
         <article class="block">
-          <div class="block-title"><!-- insert text here: note / essay title --></div>
-          <div class="block-text"><!-- insert text here: short excerpt or idea --></div>
+          <div class="block-title"><!-- note / essay title --></div>
+          <div class="block-text"><!-- short excerpt or idea --></div>
           <div class="block-media">Sketch / Diagram</div>
         </article>
 
         <article class="block">
-          <div class="block-title"><!-- insert text here: note / essay title --></div>
-          <div class="block-text"><!-- insert text here: short excerpt or idea --></div>
+          <div class="block-title"><!-- note / essay title --></div>
+          <div class="block-text"><!-- short excerpt or idea --></div>
           <div class="block-media">Sketch / Diagram</div>
         </article>
       </div>
@@ -530,7 +614,7 @@
   </main>
 
   <footer>
-    <!-- insert text here: footer text, e.g. © 2025 Emma Castelli · emmacastelli.com -->
+    © 2026 Emma S. Castelli · emmacastelli.com
   </footer>
 </body>
 </html>
