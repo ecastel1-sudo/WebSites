@@ -34,6 +34,24 @@
       --token-740fa33b-ede5-4deb-934f-9e46b39c97d6: #FFFFFFCC;               /* overlay */
     }
 
+    /* Scroll reveal base state */
+    .reveal {
+     opacity: 0;
+     transform: translateY(24px);
+     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+
+    /* Visible state when scrolled into view */
+    .reveal-visible {
+     opacity: 1;
+     transform: translateY(0);
+    }
+
+    /* Optional staggered delays */
+    .reveal-delay-1 { transition-delay: 0.15s; }
+    .reveal-delay-2 { transition-delay: 0.30s; }
+    .reveal-delay-3 { transition-delay: 0.45s; }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -429,7 +447,7 @@
     </section>
 
     <!-- About -->
-    <section class="section-orange" id="about">
+    <section class="section-orange  reveal reveal-delay-1" id="about">
       <div class="section-header">
         <div class="section-label">Learn more about me</div>
         <h2 class="section-title">About</h2>
@@ -458,7 +476,7 @@
     </section>
 
     <!-- My story -->
-    <section class="section-light-grey" id="my-story">
+    <section class="section-light-grey reveal reveal-delay-2" id="my-story">
       <div class="section-header">
         <div class="section-label">How it all started</div>
         <h2 class="section-title">My story</h2>
@@ -519,7 +537,7 @@
     </section>
 
     <!-- Vision -->
-    <section class="section-blue" id="vision">
+    <section class="section-blue  reveal reveal-delay-3" id="vision">
       <div class="section-header">
         <div class="section-label">What matters to me</div>
         <h2 class="section-title">Vision</h2>
@@ -542,7 +560,7 @@
     </section>
 
     <!-- Projects -->
-    <section class="section-light-grey" id="projects">
+    <section class="section-light-grey  reveal reveal-delay-2" id="projects">
       <div class="section-header">
         <div class="section-label">Check out my projects</div>
         <h2 class="section-title">Projects</h2>
@@ -571,7 +589,7 @@
     </section>
 
     <!-- Sports -->
-    <section class="section-darker-grey" id="sports">
+    <section class="section-darker-grey  reveal reveal-delay-1" id="sports">
       <div class="section-header">
         <div class="section-label">My main interest</div>
         <h2 class="section-title">Sports</h2>
@@ -594,7 +612,7 @@
     </section>
 
     <!-- Thoughtspace -->
-    <section id="thoughtspace">
+    <section id="thoughtspace reveal reveal-delay-2">
       <div class="section-header">
         <div class="section-label">Read my unpopular opinions and self‑development aphorisms</div>
         <h2 class="section-title">Thoughtspace</h2>
@@ -620,5 +638,26 @@
   <footer>
     © 2026 Emma S. Castelli · emmacastelli.com
   </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+          // If you only want the animation once, unobserve afterwards:
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15   // ~15% of element visible triggers reveal
+    });
+
+    revealElements.forEach(el => observer.observe(el));
+  });
+</script>
+
 </body>
 </html>
