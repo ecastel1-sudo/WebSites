@@ -326,24 +326,23 @@
     }
 
     .block-media {
-      margin-top: 0.5rem;
-      min-height: 140px;
-      border-radius: 12px;
-      border: 1px dashed rgba(20, 33, 61, 0.35);
-      background: linear-gradient(
-        135deg,
-        rgba(229, 229, 229, 0.95),
-        #FFFFFF
-      );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      color: var(--col-deep-navy);
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      opacity: 0.9;
+     margin-top: 0.5rem;
+     border-radius: 12px;
+     overflow: hidden;              /* hide overflow so cropping is clean */
+     background: #E5E5E5;           /* fallback color */
+     display: flex;
+     align-items: center;
+     justify-content: center;
     }
+
+   /* Make all images fill the same frame */
+    .block-media img {
+     width: 100%;
+     height: 220px;                 /* fixed height for consistent cards */
+     object-fit: cover;             /* crop to fill while keeping aspect */
+     display: block;
+    }
+
 
     /* Scroll reveal (if you decide to hook it up later) */
 
