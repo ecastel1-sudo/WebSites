@@ -111,6 +111,78 @@
       white-space: nowrap;
     }
 
+    /* Moving pill marquee */
+    .pill-marquee {
+      position: relative;
+      display: inline-flex;
+      max-width: 90vw;
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      margin-bottom: 1.5rem;            /* space between pill and hero title */
+      background-color: #14213D;        /* deep navy from your palette */
+      overflow: hidden;
+      border: 1px solid rgba(229, 229, 229, 0.25);
+    }
+
+    .pill-marquee-track {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.75rem;
+      white-space: nowrap;
+      animation: pillMarquee 18s linear infinite;
+    }
+
+    .pill-marquee-item {
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #E5E5E5;                   /* light grey text */
+      position: relative;
+    }
+
+    .pill-marquee-item::before {
+      content: "";
+      position: absolute;
+      left: -0.9rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background-color: #FCA311;        /* accent dot */
+    }
+
+    .pill-marquee-item:first-child::before {
+      display: none;                    /* no dot before first */
+    }
+
+    /* Hover: pause marquee */
+    .pill-marquee:hover .pill-marquee-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes pillMarquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+/* Optional: smaller on mobile */
+  @media (max-width: 600px) {
+    .pill-marquee {
+      padding: 0.3rem 0.7rem;
+    }
+    .pill-marquee-item {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      }
+    }
+
+
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -437,6 +509,12 @@
   <main>
     <!-- Hero -->
    <section class="hero" id="top">
+    <!-- Moving pill above hero title -->
+    <div class="pill-marquee">
+      <div class="pill-marquee-track" id="pill-marquee-track">
+        <span class="pill-marquee-item">Hi, I'm Emma · Fancy seeing you here!</span>
+      </div>
+    </div>
       <h1 class="hero-title" aria-label="Emma Castelli">
         <span>E</span><span>M</span><span>M</span><span>A</span>
         <span>&nbsp;</span>
@@ -459,7 +537,6 @@
       <div class="section-header">
         <div class="section-label">Learn more about me</div>
         <h2 class="section-title">About</h2>
-        <p class="section-subtitle">Hi, I'm Emma. Fancy seeing you here.</p>
         <p>
           I am a Molecular Life Sciences student at UNIL, currently finishing my MSc focusing on
           <strong>bioengineering and protein design</strong>. I come from Italy, where I completed the
@@ -541,7 +618,7 @@
     </div>
       <!-- Centered button -->
     <div>  
-      <p class="story-button-wrapper">
+      <p class="story-button-wrapper" style="justify-content:center;">
         <a class="pill-button" href="#thoughtspace">
           Checkout my experience on working in academia!
         </a>
