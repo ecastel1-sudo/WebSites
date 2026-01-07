@@ -342,6 +342,25 @@
      object-fit: cover;             /* crop to fill while keeping aspect */
      display: block;
     }
+    /* Video-hero */
+    .hero-video,
+    .section-media {
+     width: 100%;
+     max-width: 700px; /* was 500px; increase for larger visuals */
+     border-radius: 1.4rem;
+     border: 1px solid rgba(255,255,255,0.35);
+     box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+     display: block;
+     margin-left: auto;
+    }
+
+    @media (max-width: 900px) {
+      .hero-video,
+      .section-media {
+        max-width: 100%;
+        margin: 0 auto; /* centered on mobile */
+      }
+    }
 
 
     /* Scroll reveal (if you decide to hook it up later) */
@@ -645,7 +664,7 @@
         <article class="block">
           <div class="block-title">Early years</div>
           <div class="block-text">Interlaghina, October 2012</div>
-          <div class="block-text"><img src="Interlaghina_271015.jpg"></div>
+          <div class="block-text"><img src="interlaghina-al-cv-bellano-lo-pinto-vince-tra-gli-juniores_02a3f72c-995a-11e6-b15f-de719ac06744_998_397.jpg"></div>
         </article>
 
         <article class="block">
@@ -698,10 +717,31 @@
           <div class="block-media"><img src="suisse-iGEM.JPG"></div>
         </article>
 
-        <article class="block">
+        <article class="hero-video">
           <div class="block-title"><!-- project name --></div>
-          <div class="block-text"><!-- short project description --></div>
-          <div class="block-media"><img src=""></div>
+          <!-- Pipeline media: centered below steps -->
+            <div class="reveal" style="margin-top:3rem;">
+            <div style="
+              max-width: 900px;
+              margin: 0 auto;
+              display:flex;
+              justify-content:center;
+              ">
+              <video
+                class="section-media"
+                autoplay
+                muted
+                loop
+                playsinline
+                style="
+                  max-width: 900px;
+                  width: 100%;
+                  margin: 0 auto;
+                "
+                >
+                <source src="movie1.mp4" type="video/mp4" />
+              </video>
+            </div>
         </article>
 
         <article class="block">
