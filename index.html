@@ -791,6 +791,20 @@
   </footer>
 
   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const track = document.getElementById('pill-marquee-track');
+      if (!track) return;
+
+      // Duplicate the content once to create an infinite-like scroll
+      const items = Array.from(track.children);
+      items.forEach(item => {
+        const clone = item.cloneNode(true);
+        track.appendChild(clone);
+      });
+    });
+  </script>
+
+  <script>
   document.addEventListener('DOMContentLoaded', function () {
     const revealElements = document.querySelectorAll('.reveal');
 
