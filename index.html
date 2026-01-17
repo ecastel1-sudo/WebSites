@@ -501,6 +501,131 @@
         letter-spacing: 0.18em;
       }
     }
+    /* ---------- Global small-screen tweaks ---------- */
+    @media (max-width: 768px) {
+      body {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      section {
+        padding: 3rem 0.75rem 2.5rem;
+      }
+
+      .section-inner {
+        padding: 0 0.75rem;
+      }
+
+      /* Header / nav */
+      header {
+        padding: 0.3rem 0;
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        padding: 0.6rem 0.75rem;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        font-size: 0.75rem;
+      }
+
+      nav a {
+        padding: 0.25rem 0.7rem;
+      }
+
+      /* Hero */
+      .hero {
+        padding: 3.5rem 0.75rem 2rem;
+      }
+
+      .hero-title {
+        font-size: clamp(2rem, 8vw, 2.6rem);
+        letter-spacing: 0.15em;
+        flex-wrap: wrap;           /* allow wrapping on narrow screens */
+        justify-content: center;
+      } 
+      .hero-subtitle {
+        font-size: 0.9rem;
+        max-width: 100%;
+      }
+
+      .hero-cta-row {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .pill-button {
+        font-size: 0.75rem;
+        padding: 0.55rem 1.1rem;
+      }
+
+      /* Pill marquee (you already started this but we tighten more) */
+      .pill-marquee {
+        max-width: 100%;
+        padding: 0.25rem 0.6rem;
+      }
+      .pill-marquee-item {
+        font-size: 0.6rem;
+        letter-spacing: 0.14em;
+      }
+
+      /* Blocks: single column on phone */
+      .blocks {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .block {
+        padding: 1.1rem 1.1rem 1rem;
+      }
+
+      /* Images: avoid huge vertical height on phone */
+      .block-media img {
+        height: 260px;           /* instead of 500px */
+      }
+
+      /* Video / section media */
+      .hero-video,
+      .section-media {
+        max-width: 100%;
+        margin: 1.5rem auto 0;
+      }
+
+      /* Section headings */
+      .section-title {
+        font-size: 1.3rem;
+        letter-spacing: 0.06em;
+      }
+
+      .section-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.16em;
+      }
+
+      .section-subtitle {
+        font-size: 0.9rem;
+        max-width: 100%;
+      }
+
+      /* Footer */
+      footer {
+        max-width: 100%;
+        padding: 1rem 0.75rem 2rem;
+        text-align: center;
+      }
+
+      footer .container {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
+
 
     /* Center long text inside #my-story only if you want it */
     #my-story .section-subtitle,
@@ -688,7 +813,7 @@
         <article class="block">
           <div class="block-title"><!-- pillar title --></div>
           <div class="block-text"><!-- body text --></div>
-          <div class="block-media"><img src="run-club-2025.JPG"></div>
+          <div class="block-media"><img src="e-j-talentkick.jpg"></div>
         </article>
       </div>
      </section>
