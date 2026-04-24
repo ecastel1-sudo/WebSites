@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Emma S. Castelli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:       #F9F7F3;
+      --ink:      #1C1C1C;
+      --muted:    #6B6660;
+      --accent:   #2D5A8E;
+      --rule:     #DDD9D3;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.72;
+      font-weight: 300;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    a:hover { border-bottom-color: var(--accent); }
+
+    /* ── Layout ── */
+    .page {
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    /* ── Header drawing area ── */
+    .header-art {
+      display: flex;
+      align-items: flex-start;
+      gap: 2.5rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .drawing-name {
+      flex: 1;
+    }
+
+    .drawing-name svg {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      display: block;
+    }
+
+    .drawing-side {
+      flex-shrink: 0;
+      width: 120px;
+    }
+
+    .drawing-side svg {
+      width: 120px;
+      height: auto;
+      display: block;
+    }
+
+    /* ── Name heading ── */
+    h1.site-name {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+      margin-top: 0.5rem;
+    }
+
+    /* ── Body text ── */
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Sections ── */
+    .section {
+      margin-top: 2.6rem;
+      padding-top: 2.6rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    h2.section-label {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+    }
+
+    /* ── Project / Sports entries ── */
+    .entry {
+      margin-bottom: 1.4rem;
+    }
+
+    .entry-title {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--ink);
+    }
+
+    .entry-title a {
+      color: var(--ink);
+      border-bottom: 1px solid var(--rule);
+    }
+    .entry-title a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .entry-desc {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-top: 0.18rem;
+      line-height: 1.55;
+    }
+
+    /* ── Vision block ── */
+    .vision-text {
+      font-size: 0.96rem;
+      color: var(--muted);
+    }
+
+    /* ── Footer links ── */
+    .footer-links {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.88rem;
+      color: var(--muted);
+      display: flex;
+      gap: 1.4rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      border-bottom: none;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ── Mobile ── */
+    @media (max-width: 520px) {
+      .header-art { flex-direction: column; gap: 1.5rem; }
+      .drawing-side { width: 90px; }
+      .page { padding: 2.5rem 1.4rem 5rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── Header: name drawing + side sailboat ── -->
+  <div class="header-art">
+
+    <!-- Name with butterfly (SVG inline illustration) -->
+    <div class="drawing-name">
+      <svg viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg" aria-label="Emma Sara Castelli with butterfly">
+
+        <!-- Butterfly body -->
+        <ellipse cx="184" cy="22" rx="2.5" ry="8" fill="#1C1C1C" opacity="0.75"/>
+        <!-- Butterfly antennae -->
+        <path d="M184 14 Q178 6 174 4" stroke="#1C1C1C" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.6"/>
+        <circle cx="174" cy="4" r="1.5" fill="#2D5A8E" opacity="0.8"/>
+        <path d="M184 14 Q190 6 194 4" stroke="#1C1C1C" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.6"/>
+        <circle cx="194" cy="4" r="1.5" fill="#2D5A8E" opacity="0.8"/>
+        <!-- Butterfly upper wings -->
+        <path d="M182 18 Q162 8 148 14 Q138 20 148 30 Q158 38 182 28 Z" fill="#2D5A8E" opacity="0.22"/>
+        <path d="M186 18 Q206 8 220 14 Q230 20 220 30 Q210 38 186 28 Z" fill="#2D5A8E" opacity="0.22"/>
+        <!-- Butterfly lower wings -->
+        <path d="M182 26 Q162 32 152 42 Q148 50 158 50 Q170 50 182 36 Z" fill="#2D5A8E" opacity="0.15"/>
+        <path d="M186 26 Q206 32 216 42 Q220 50 210 50 Q198 50 186 36 Z" fill="#2D5A8E" opacity="0.15"/>
+        <!-- Wing veins -->
+        <path d="M182 18 Q168 14 155 18" stroke="#2D5A8E" stroke-width="0.6" fill="none" opacity="0.4"/>
+        <path d="M186 18 Q200 14 213 18" stroke="#2D5A8E" stroke-width="0.6" fill="none" opacity="0.4"/>
+
+        <!-- Name text: emma sara castelli, hand-drawn feel via Lora italic -->
+        <text x="0" y="85" font-family="Georgia, serif" font-style="italic" font-size="36" fill="#1C1C1C" letter-spacing="0.5">emma</text>
+        <text x="0" y="115" font-family="Georgia, serif" font-style="italic" font-size="22" fill="#6B6660" letter-spacing="1">sara castelli</text>
+      </svg>
+    </div>
+
+    <!-- Side: sailboat and sea -->
+    <div class="drawing-side">
+      <svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-label="Sailboat on the sea">
+        <!-- Water waves -->
+        <path d="M0 130 Q15 124 30 130 Q45 136 60 130 Q75 124 90 130 Q105 136 120 130 L120 160 L0 160 Z" fill="#2D5A8E" opacity="0.12"/>
+        <path d="M0 138 Q20 132 40 138 Q60 144 80 138 Q100 132 120 138 L120 160 L0 160 Z" fill="#2D5A8E" opacity="0.18"/>
+        <path d="M0 148 Q25 142 50 148 Q75 154 100 148 Q110 145 120 148 L120 160 L0 160 Z" fill="#2D5A8E" opacity="0.25"/>
+
+        <!-- Wave lines on water surface -->
+        <path d="M8 133 Q18 130 28 133" stroke="#2D5A8E" stroke-width="0.8" fill="none" opacity="0.5"/>
+        <path d="M50 136 Q62 133 74 136" stroke="#2D5A8E" stroke-width="0.8" fill="none" opacity="0.5"/>
+        <path d="M88 132 Q98 129 108 132" stroke="#2D5A8E" stroke-width="0.8" fill="none" opacity="0.4"/>
+
+        <!-- Hull -->
+        <path d="M35 128 Q42 135 60 136 Q78 135 85 128 L80 122 L40 122 Z" fill="#1C1C1C" opacity="0.8"/>
+        <!-- Hull waterline shine -->
+        <path d="M40 123 Q60 121 80 123" stroke="white" stroke-width="0.8" fill="none" opacity="0.4"/>
+
+        <!-- Mast -->
+        <line x1="60" y1="122" x2="60" y2="42" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
+
+        <!-- Main sail -->
+        <path d="M60 45 L60 118 L88 105 Z" fill="#F9F7F3" stroke="#1C1C1C" stroke-width="0.8" opacity="0.9"/>
+        <!-- Main sail shadow/depth -->
+        <path d="M60 70 L80 65" stroke="#DDD9D3" stroke-width="0.5" fill="none"/>
+
+        <!-- Jib sail -->
+        <path d="M60 55 L60 115 L36 100 Z" fill="#2D5A8E" opacity="0.18" stroke="#2D5A8E" stroke-width="0.7"/>
+
+        <!-- Boom -->
+        <line x1="60" y1="118" x2="86" y2="108" stroke="#1C1C1C" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+
+        <!-- Small flag at top -->
+        <path d="M60 42 L68 46 L60 50 Z" fill="#2D5A8E" opacity="0.7"/>
+
+        <!-- Horizon line -->
+        <line x1="0" y1="128" x2="120" y2="128" stroke="#DDD9D3" stroke-width="0.8" opacity="0.8"/>
+
+        <!-- Sky: faint sun -->
+        <circle cx="22" cy="30" r="8" fill="#F9F7F3" stroke="#DDD9D3" stroke-width="0.8" opacity="0.6"/>
+        <circle cx="22" cy="30" r="5" fill="#DDD9D3" opacity="0.4"/>
+      </svg>
+    </div>
+
+  </div><!-- /header-art -->
+
+  <!-- ── About ── -->
+  <p>
+    Hi, I'm Emma. I'm a molecular biologist and bioengineer finishing my MSc at the University of Lausanne, where I work at the intersection of <strong>synthetic biology, protein engineering, and sustainable industrial processes</strong>.
+  </p>
+  <p>
+    I grew up in Italy, racing sailboats on Lake Como from the age of eight. That world — wind, water, the discipline of iteration — shaped how I think. Life took me to the Netherlands for a BSc (Cum Laude) in Liberal Arts and Life Sciences at Maastricht University, then to Lausanne, where I've found the intellectually demanding environment I was looking for.
+  </p>
+  <p>
+    The real inflection point was leading the <strong>UNIL iGEM team in 2025</strong>, which pulled me from academia toward something more grounded: building a company with two teammates to develop biological systems for recovering rare earth elements from electronic waste. I believe engineered biology can replace extraction and heavy chemistry with something smarter, more precise, and more sustainable.
+  </p>
+  <p>
+    Along the way, I have learned that resilience is not a constant — it is something you rebuild, quietly, each time the path redirects.
+  </p>
+
+  <!-- ── Vision ── -->
+  <div class="section">
+    <h2 class="section-label">Vision</h2>
+    <p class="vision-text">
+      I'm motivated by the idea that <strong>biomanufacturing can do what extraction cannot</strong>: recover critical materials cleanly, at scale, with Armstrong-level precision. My focus is rare earth elements — essential to every green technology, yet still mined and refined through processes that are neither circular nor sustainable. I want to change that, starting with biology.
+    </p>
+    <p class="vision-text">
+      More broadly, I believe protein design and synthetic biology are the tools for a new industrial revolution — one rooted in scientific excellence rather than cost-cutting. Making European industry competitive again through innovation, not offshoring, is a goal worth working toward.
+    </p>
+  </div>
+
+  <!-- ── Projects ── -->
+  <div class="section">
+    <h2 class="section-label">Projects</h2>
+
+    <div class="entry">
+      <div class="entry-title"><a href="/projects">Rare Earth Biorecovery Startup</a></div>
+      <div class="entry-desc">Turning the UNIL iGEM 2025 project into a company. Engineered proteins for recovering rare earth elements from electronic waste — with Chloé and Julien.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="https://paris.igem.org" target="_blank" rel="noopener">Swiss iGEM Teams · Paris Grand Jamboree 2025</a></div>
+      <div class="entry-desc">Led the UNIL team to the Grand Jamboree. Prize-winning project on sustainable biorecovery. Also: yes, we did steal the sign.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="/projects">Pepperlink · UNIL CIG 2024</a></div>
+      <div class="entry-desc">Computational and structural biology work at the CIG. The day I decided to make Rosalind Franklin proud.</div>
+    </div>
+  </div>
+
+  <!-- ── Sports ── -->
+  <div class="section">
+    <h2 class="section-label">Sports</h2>
+
+    <div class="entry">
+      <div class="entry-title"><a href="/sports">Sailing</a></div>
+      <div class="entry-desc">Racing since age eight — Optimist, Hobie Cat 16 (Italian national team, 2019 European Championship in La Rochelle), 29er, and now J/70 with LUC Voile in the Swiss Sailing League. Sailing taught me that success is earned through hard, patient work and that conditions are never an excuse.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="/sports">Triathlon</a></div>
+      <div class="entry-desc">Active in the Swiss Triathlon Circuit. First race: August 2025. Endurance sport as moving meditation — a space to think, reset, and come back sharper. Pacer for the Lausanne Run Club (LRC).</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-title"><a href="/sports">Mountains & more</a></div>
+      <div class="entry-desc">Long rides along Lake Como, early-morning ski days before sunrise, open-water swims. The philosophy of movement, not the performance of it.</div>
+    </div>
+  </div>
+
+  <!-- ── Thoughtspace ── -->
+  <div class="section">
+    <h2 class="section-label">Thoughtspace</h2>
+    <p>
+      Unpopular opinions, self-development aphorisms, and ideas I can't stop thinking about. If you want to know what's actually on my mind — <a href="/thoughtspace">read the thoughtspace</a>.
+    </p>
+  </div>
+
+  <!-- ── Footer ── -->
+  <div class="footer-links">
+    <a href="https://github.com/ecastel1-sudo" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/emma-castelli-1325b72b5/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://x.com/ECastelli17109" target="_blank" rel="noopener">X</a>
+    <a href="https://calendly.com/emmasara-castelli/" target="_blank" rel="noopener">Book a meeting</a>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
